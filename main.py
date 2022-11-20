@@ -21,10 +21,7 @@ else:
     lampotila = round(saa_data.json()['main']['temp'])
     sijainti = saa_data.json()['coord']
 
-    print(f"Sää paikassa {syote} on: {saa}")
-    print(f"Sään tarkempi kuvaus: {saakuvaus} ")
-    print(f"Lämpötila paikassa {syote} on: {lampotila}°C")
-    print(f"Kaupungin {syote} koordinaatit ovat: {sijainti}")
+    
 
 
 root = Tk()
