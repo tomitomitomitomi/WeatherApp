@@ -23,10 +23,12 @@ root.geometry("350x350")
 root.title("Sääseuranta - " + f'{syote}')
 
 def nayta_kaupungin_nimi(syote):
+    
     kaupunki_label = Label(root, text=f"{syote}")
     kaupunki_label.config(font=("Consolas", 28))
     kaupunki_label.pack(side='top')
 
+    
 def nayta_statistiikat(saa, saakuvaus, lampotila, sijainti):
 
     saa = Label(root, text=f"{saa}")
@@ -34,13 +36,10 @@ def nayta_statistiikat(saa, saakuvaus, lampotila, sijainti):
     lampotila = Label(root, text=f"{lampotila} °C")
     sijainti = Label(root, text=f"{sijainti}")
 
-
-
     saa.config(font=("Consolas", 22))
     saakuvaus.config(font=("Consolas", 22))
     lampotila.config(font=("Consolas", 22))
     sijainti.config(font=("Consolas", 22))
-
 
     saa.pack(side='top')
     saakuvaus.pack(side='top')
