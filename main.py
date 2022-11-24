@@ -6,22 +6,16 @@ api = '88231e840f02fbfe64b9e74454d91e89'
 syote = input("Anna kaupunki: ")
 
 saa_data = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={syote}&units=metric&APPID={api}")
-print(saa_data.json())
-
-saa = saa_data.json()['weather'][0]['main']   #uudelleen tähän, koska toinen aliohjelma ei voi noutaa alemmasta iffistä
-saakuvaus = saa_data.json()['weather'][0]['description']
-lampotila = round(saa_data.json()['main']['temp'])
-sijainti = saa_data.json()['coord']
-
 if saa_data.json()['cod'] == '404':
     print("Kaupunkia ei löytynyt")
+    exit()
 else:
     saa = saa_data.json()['weather'][0]['main']
     saakuvaus = saa_data.json()['weather'][0]['description']
     lampotila = round(saa_data.json()['main']['temp'])
     sijainti = saa_data.json()['coord']
 
-    
+print(saa_data.json())
 
 
 root = Tk()
